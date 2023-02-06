@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+    @font-face {
+        font-family: 'Nunito Sans';
+        src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap');
+        font-weight: 300;
+    }
+} */
+
+@layer components {
+    h1 {
+        @apply font-sans text-xl text-center text-primary-beige;
+    }
+    h2 {
+        @apply font-sans font-extralight text-sm text-dark-grey mb-1;
+    }
+    h3 {
+        @apply cursor-pointer text-primary-beige text-xs;
+    }
+    h4 {
+        @apply cursor-pointer text-light-grey text-xs;
+    }
+    .sale-text {
+        @apply text-red-600;
+    }
+    .menu {
+        @apply cursor-pointer font-sans font-light text-sm tracking-widest text-primary-gold py-5 border-b border-solid border-opacity-50 border-primary-gold;
+    }
+
+    .desktop-menu {
+        @apply text-sm font-light tracking-widest text-primary-beige cursor-pointer hover:border-b border-solid border-b-primary-beige;
+    }
+    .link-footer {
+        @apply font-sans font-extralight text-sm text-light-grey tracking-wider;
+    }
+    .footer-section {
+        @apply flex flex-col space-y-2 py-4;
+    }
+    .btn-orange {
+        @apply flex flex-wrap text-center px-4 py-2 lg:px-6 lg:py-3 cursor-pointer bg-primary-orange text-[10px]  md:text-xs lg:text-sm text-white tracking-widest border border-solid border-primary-orange hover:bg-opacity-0 hover:text-primary-orange; 
+    }
+
+    .btn-yellow {
+        @apply px-4 py-2 lg:px-6 lg:py-3 cursor-pointer bg-primary-yellow text-xs lg:text-sm text-dark-orange tracking-widest border border-solid border-primary-yellow hover:bg-opacity-0;
+    }
+    .btn-white {
+        @apply px-4 py-2 lg:px-6 lg:py-3 cursor-pointer bg-white text-xs lg:text-sm text-dark-grey tracking-widest;
+    }
+
+    .vertical-dots {
+        @apply left-10 list-none block absolute top-0 text-left;
+    }
+    .vertical-dots li {
+        @apply relative cursor-pointer mb-3;
+    }
+    .thumbnail {
+        @apply w-16 h-auto object-cover;
+    }
+}
